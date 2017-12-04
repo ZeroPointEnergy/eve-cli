@@ -1,7 +1,15 @@
-require "eve/cli/version"
+#
+# EVE CLI
+#
+require 'eve/cli/version'
 
 module Eve
-  module Cli
-    # Your code goes here...
+  class Cli
+
+    def self.run(_args)
+      puts 'hello world'
+      return 0
+    end
+
   end
 end

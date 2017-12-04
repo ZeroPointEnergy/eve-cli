@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'eve/cli'
+exit Eve::Cli.run(ARGV)
