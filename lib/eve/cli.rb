@@ -1,15 +1,29 @@
 #
 # EVE CLI
 #
+require 'gli'
 require 'eve/cli/version'
+require 'eve/cli'
 
 module Eve
-  class Cli
+  module Cli
+    include GLI::App
+    extend self
 
-    def self.run(_args)
-      puts 'hello world'
-      return 0
+    program_desc 'EVE Online Command-line Client (ESI API)'
+    version Eve::Cli::VERSION
+
+    subcommand_option_handling :normal
+    arguments :strict
+
+    global_options(self)
+
+    pre do |global,command,options,args|
+      Eve.configure = global
+      ENV['GLI_DEBUG'] = 'true' if global[:trace] == true
+      true
     end
 
+    commands_market(self)
   end
 end

@@ -1,0 +1,132 @@
+# API URIS
+#
+# https://esi.tech.ccp.is/ui/
+
+#
+# Region
+#
+
+https://esi.tech.ccp.is/latest/universe/regions/?datasource=tranquility
+
+[
+  10000001,
+  10000002,
+  10000006,
+]
+
+https://esi.tech.ccp.is/latest/universe/regions/10000006/?datasource=tranquility&language=en-us
+
+{
+  "region_id": 10000006,
+  "name": "Wicked Creek",
+  "constellations": [
+    20000077,
+    20000078,
+    20000079,
+    20000080,
+    20000081,
+    20000082,
+    20000083,
+    20000084,
+    20000085,
+    20000086,
+    20000087,
+    20000088
+  ],
+  "description": "Forming the core of the southeastern cluster, this has long been a heartland of the Angel Cartel, as well as a frequent stomping ground of Thukker outriders. Its maze of systems, centralized position and multiple exits have also made it a favored hideaway of many particularly notorious criminals over the course of its long, tainted history. Some of the most infamous villains in living memory (including serially genocidal Black Harold, the arch-defiler Lucias, and the enigma that was Susa'tah) have run to - and occasionally been run to ground in - the Creek's dark embrace.\r\n"
+}
+
+#
+# Market Types
+#
+
+https://esi.tech.ccp.is/latest/markets/10000006/types/?datasource=tranquility&page=1
+
+[
+  19143,
+  19149,
+  9800,
+  45609,
+  27371,
+  8089,
+  19286,
+]
+
+https://esi.tech.ccp.is/latest/universe/types/19149/?datasource=tranquility&language=en-us
+
+{
+  "type_id": 19149,
+  "name": "Pithum B-Type Medium Remote Shield Booster",
+  "description": "Transfers shield power over to the target ship, aiding in its defense.",
+  "published": true,
+  "group_id": 41,
+  "market_group_id": 602,
+  "radius": 1,
+  "volume": 10,
+  "packaged_volume": 10,
+  "icon_id": 86,
+  "capacity": 0,
+  "portion_size": 1,
+  "mass": 0,
+  "dogma_attributes": [...]
+  "dogma_effects": [...]
+}
+
+#
+# Market Info
+#
+
+https://esi.tech.ccp.is/latest/markets/10000032/orders/?datasource=tranquility&order_type=all&page=1&type_id=19149
+
+PAGED
+
+[
+  {
+    "order_id": 4977077083,
+    "type_id": 19149,
+    "location_id": 60011866,
+    "volume_total": 7,
+    "volume_remain": 7,
+    "min_volume": 1,
+    "price": 7800000,
+    "is_buy_order": true,
+    "duration": 90,
+    "issued": "2017-12-03T05:38:12Z",
+    "range": "station"
+  },
+  {
+    "order_id": 4964038451,
+    "type_id": 19149,
+    "location_id": 60011866,
+    "volume_total": 10000,
+    "volume_remain": 9996,
+    "min_volume": 1,
+    "price": 0.01,
+    "is_buy_order": true,
+    "duration": 90,
+    "issued": "2017-09-17T21:49:51Z",
+    "range": "40"
+  }
+]
+
+
+https://esi.tech.ccp.is/latest/markets/10000032/history/?datasource=tranquility&type_id=19149
+
+[
+  {
+    "date": "2016-11-04",
+    "order_count": 3,
+    "volume": 4,
+    "highest": 31999998.8,
+    "average": 31749999.1,
+    "lowest": 30999999.99
+  },
+  {
+    "date": "2016-11-06",
+    "order_count": 1,
+    "volume": 1,
+    "highest": 19000000,
+    "average": 19000000,
+    "lowest": 19000000
+  },
+]
