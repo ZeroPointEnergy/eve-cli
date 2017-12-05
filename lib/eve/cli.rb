@@ -2,8 +2,9 @@
 # EVE CLI
 #
 require 'gli'
+require 'eve/config'
 require 'eve/cli/version'
-require 'eve/cli'
+require 'eve/cli/global_options'
 
 module Eve
   module Cli
@@ -24,6 +25,6 @@ module Eve
       true
     end
 
-    commands_market(self)
+    #commands_market(self)
   end
 end
